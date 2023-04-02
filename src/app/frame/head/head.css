@@ -1,0 +1,34 @@
+#head-component {
+    border: 1px solid black;
+}
+
+ul {
+    background-color: lightseagreen;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    text-align: center;
+
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+li {
+    float: left;
+    margin: 0;
+    width: 15%;
+    color: white;
+}
+
+.head-tag {
+    padding: 12px;
+}
+.head-tag:hover {
+    background-color: #219189;
+
+}

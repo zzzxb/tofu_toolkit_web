@@ -1,0 +1,87 @@
+#login-component {
+    /*border: 1px solid red;*/
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#login-box {
+    /*border: 1px solid blue;*/
+    width: 30em;
+    height: 100%;
+    margin: 10em auto;
+    padding: 0;
+}
+
+#login-box-header {
+    /*border: 1px solid black;*/
+    padding: 0;
+    width: 100%;
+    height: 20%;
+    text-align: center;
+}
+
+.letter_tofu {
+    color: #d95763;
+}
+.letter_cat {
+    color: #249365;
+}
+.letter_toolkit {
+    color: #317bff;
+}
+
+#login-box-body {
+    /*border: 1px solid green;*/
+    width: 100%;
+    height: 70%;
+    padding: 0 0;
+}
+
+.form-group {
+    /*border: 1px solid purple;*/
+    width: 80%;
+    height: 100%;
+    margin: 2em auto;
+    padding: 0 0;
+}
+
+.form-control {
+    border: 1px solid orange;
+    font-size: 18px;
+    margin: 0 auto;
+    padding: 0.5em 0.5em;
+    width: 94%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.btn-primary {
+    border: 1px solid white;
+    font-size: 18px;
+    margin: 0 auto;
+    padding: 0.5em;
+    width: 100%;
+    height: 100%;
+    background-color: dodgerblue;
+    color: white;
+    border-radius: 15px;
+}
+
+.btn-primary:hover {
+    background-color: #197ee4;
+    color: white;
+}
+
+#login-box-foot {
+    /*border: 1px solid yellow;*/
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    height: 10%;
+}
+
+#login-box-foot a {
+    color: dodgerblue;
+}
