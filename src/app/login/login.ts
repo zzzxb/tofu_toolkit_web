@@ -1,5 +1,6 @@
 import {Component, Injectable} from '@angular/core';
 import {Router} from '@angular/router';
+import {AppComponent} from "../component";
 
 @Component({
     selector: 'app-login',
@@ -25,14 +26,16 @@ export class Login {
         this.password = (<HTMLInputElement>event.target).value;
     }
 
-    constructor(private router: Router) {}
+    constructor(private router: Router, private comp: AppComponent) {}
 
     login() {
+
         if (this.username == "" || this.password == "") {
             alert("Please enter username and password");
             return;
         }
         if (this.username == "admin" && this.password == "admin") {
+            this.comp.auth = true;
             this.router.navigate(['/home'])
                 .then(r => console.log(r));
         }

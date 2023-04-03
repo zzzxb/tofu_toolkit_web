@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Injectable} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +7,7 @@ import {Component} from '@angular/core';
 })
 
 
+@Injectable( {providedIn: 'root'} )
 export class AppComponent {
-  title = 'this is component.'
+  auth: boolean = false;
 }
