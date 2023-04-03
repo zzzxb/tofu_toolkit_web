@@ -11,11 +11,11 @@ import {Router} from '@angular/router';
 export class Login {
     username = "";
     usernameMaxLength = 10;
-    usernameBorderColor = "orange";
+    usernameBorderColor = "white";
 
     password = "";
     passwordMaxLength = 10;
-    passwordBorderColor = "orange";
+    passwordBorderColor = "white";
 
     inputUsername(event: KeyboardEvent) {
         this.username = (<HTMLInputElement>event.target).value;
