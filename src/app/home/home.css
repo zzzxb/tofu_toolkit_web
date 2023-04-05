@@ -1,0 +1,43 @@
+/* body style*/
+#body-component {
+    height: 45em;
+    background-color: white;
+}
+
+/* header style*/
+#head-component {
+    text-align: center;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+li {
+    float: left;
+    margin: 0;
+    width: 10%;
+    color: white;
+}
+
+.head-tag {
+    padding: 15px;
+}
+
+.head-tag:hover {
+    background-color: #219189;
+}
+
+/* footer style */
+#foot-component {
+    text-align: center;
+    padding: 20px;
+}
+
+#foot-box {
+    color: black;
+    font-size: 13px;
+}

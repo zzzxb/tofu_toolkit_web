@@ -1,11 +1,11 @@
 import {Component, Injectable} from '@angular/core';
 
 @Component({
-    selector: 'app-foot',
-    templateUrl: './foot.html',
-    styleUrls: ['./foot.css']
+    selector: 'app-toolkit',
+    templateUrl: './doc.html',
+    styleUrls: ['./doc.css']
 })
 
 @Injectable( {providedIn: 'root'} )
-export class Foot {
+export class Doc {
 }
