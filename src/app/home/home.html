@@ -1,25 +1,14 @@
-<div id="head-component" class="no-select">
-    <ul >
-        <li> <a routerLink="/home">
-            <img src="../../../favicon.ico" width="40" height="40" alt="home">
-        </a> </li>
-        <a routerLink="/home/toolkit">
-            <li class="head-tag"> ToolKit </li>
-        </a>
-        <a routerLink="/home/doc">
-            <li class="head-tag"> Doc </li>
-        </a>
-    </ul>
-</div>
-
-<div id = 'body-component'>
-    this is home
-
-    <router-outlet></router-outlet>
-</div>
-
-<div id="foot-component" class="no-select">
-    <div id="foot-box">
-        Copyright 2023 Tofu Cat Doc. All Rights Reserved. <a href="https://github.com/zzzxb">Zzzxb</a>
-    </div>
-</div>
+<mat-tab-group animationDuration="0">
+    <mat-tab label="{{list.tm.tag}}" *ngFor="let list of navList">
+        <mat-drawer-container>
+            <mat-drawer mode="side" opened>
+                <div class="div-button no-select" *ngFor="let side of list.sn">
+                    {{side.tag}}
+                </div>
+            </mat-drawer>
+            <mat-drawer-content>
+                this is {{list.tm.tag}}
+            </mat-drawer-content>
+        </mat-drawer-container>
+    </mat-tab>
+</mat-tab-group>
