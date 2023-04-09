@@ -1,5 +1,5 @@
 import {Component, Injectable} from '@angular/core';
-
+import {Nav} from "../comment/Nav";
 
 @Component({
     selector: 'app-home',
@@ -9,43 +9,24 @@ import {Component, Injectable} from '@angular/core';
 
 @Injectable( {providedIn: 'root'} )
 export class Home {
-    navNum = 0;
+    officialWebsite = 'https://www.umyun.com';
 
-    navList: NavManage[] = [
-        new NavManage('Toolkit', '#')
-            .appendSide('首页', '#'),
-        new NavManage('Document', '#')
-            .appendSide('首页', '#')
-            .appendSide('视频短信文档', '#')
+    updateTitle(nav: Nav) {
+        this.nowNav = nav;
+    }
+    navArray: Nav[] = [
+        new Nav("主页", 'Home', "/home"),
+        new Nav("视频短信", 'VideoMsg', "/home/video"),
+        new Nav("文本短信", 'TextMsg', "/home/text"),
+        new Nav("语音短信", 'AudioMsg', "/home/audio"),
+        new Nav("文档", 'Document',"/home/doc"),
+        new Nav("LLC", 'LLC', "/home/llc"),
+        new Nav("工具", 'Toolkit', "/home/toolkit"),
     ];
+    nowNav = this.navArray[0];
+    bodyContentStyle = "height: " + (window.innerHeight) + "px";
 
-    switchNav(num: number) {
-        this.navNum = num;
-    }
-
-    showSideNav() {
-        return this.navList[this.navNum].sn
-    }
-}
-class NavManage {
-    tm: TagManger;
-    sn: TagManger[] = []
-
-    constructor(tag: string, jumpUrl: string) {
-        this.tm = new TagManger(tag, jumpUrl);
-    }
-
-    appendSide(tag: string, jumpUrl: string) {
-        this.sn.push(new TagManger(tag, jumpUrl));
-        return this;
-    }
-}
-
-class TagManger {
-    tag: string = ''
-    jumpUrl: string = ''
-    constructor(tag: string, jumpUrl: string) {
-        this.tag = tag;
-        this.jumpUrl = jumpUrl;
+    openUrl(url: string) {
+        window.open(url);
     }
 }

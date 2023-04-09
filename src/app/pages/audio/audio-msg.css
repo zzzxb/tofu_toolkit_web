@@ -1,0 +1,9 @@
+textarea {
+    width: 95.7%;
+    height: 10em;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    padding: 2%;
+    margin: 0.5em auto;
+    resize: none;
+}

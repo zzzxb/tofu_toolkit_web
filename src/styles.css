@@ -3,7 +3,6 @@ body {
     background-color: lightseagreen;
     font-family: Roboto, "Helvetica Neue", sans-serif;
     margin: 0;
-    /*height: 100%;*/
     padding: 0;
 }
 
@@ -12,8 +11,57 @@ html, body {
 }
 
 #body-component {
-    border: 1px solid red;
+    background-color: white;
+    border-radius: 3px;
     padding: 10px;
+    margin: 2em;
+    box-shadow:
+            0 0 20px 0 rgba(24,24,24,0.8);
+}
+
+.div-link {
+    background-color: #249365;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 10px auto;
+
+    -webkit-transition-duration: 0.2s; /* Safari */
+    transition-duration: 0.2s;
+}
+
+.div-link:hover {
+    /*background-color: rgba(24,24,24,0.1);*/
+    background-color: rgba(36,115,69, 1);
+}
+
+
+.div-box {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 10px auto;
+}
+
+.input-box {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 1em auto;
+    width: 97.5%;
+    font-size: 18px;
+}
+
+.select-box {
+    background-color: coral;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    margin: 10px auto;
+    width: 100%;
+    font-size: 18px;
 }
 
 .no-select {

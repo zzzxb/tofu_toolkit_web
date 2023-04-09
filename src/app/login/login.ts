@@ -1,6 +1,7 @@
 import {Component, Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {AppComponent} from "../component";
+import {HttpReq} from "../comment/HttpReq";
 
 @Component({
     selector: 'app-login',
@@ -26,18 +27,19 @@ export class Login {
         this.password = (<HTMLInputElement>event.target).value;
     }
 
-    constructor(private router: Router, private comp: AppComponent) {}
+    constructor(private router: Router, private comp: AppComponent, private http: HttpReq) {}
+
 
     login() {
-
         if (this.username == "" || this.password == "") {
             alert("Please enter username and password");
             return;
         }
-        if (this.username == "admin" && this.password == "admin") {
-            this.comp.auth = true;
-            this.router.navigate(['/home'])
-                .then(r => console.log(r));
-        }
+
+        let resp = this.http.post<String>("/token", null)
+        resp.subscribe(s => console.log(s))
+
+        this.router.navigate(['/home'])
+            .then(r => console.log(r));
     }
 }

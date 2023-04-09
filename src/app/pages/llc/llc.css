@@ -1,0 +1,11 @@
+textarea {
+    width: 96%;
+    height: 10em;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    padding: 2%;
+    margin: 0.5em auto;
+    min-height: 15em;
+    max-height: 30em;
+    resize: vertical;
+}

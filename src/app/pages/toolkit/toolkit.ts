@@ -8,4 +8,9 @@ import {Component, Injectable} from '@angular/core';
 
 @Injectable( {providedIn: 'root'} )
 export class Toolkit {
+    showDiv = 'none';
+
+    show() {
+        this.showDiv = this.showDiv == 'none'? 'block' : 'none';
+    }
 }

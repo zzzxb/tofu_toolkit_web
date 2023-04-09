@@ -1,28 +1,33 @@
-mat-drawer-container {
-    height: 100em;
+/* content */
+
+/* nav */
+.example-spacer {
+    flex: 1 1 auto;
 }
 
-mat-drawer-content {
-    height: 100em;
+.div-button {
+    width: 10em;
+    padding:20px;
+    text-align: center;
+}
+
+.div-button:hover {
+    background-color: #229b93;
+    width: 10em;
+    padding:20px;
+    text-align: center;
+}
+mat-toolbar {
+    background-color: lightseagreen;
 }
 
 mat-drawer {
     background-color: lightseagreen;
-    height: 100em;
-}
-
-.div-button {
-    text-align: center;
-    width: 8em;
-    height: 20px;
-    padding: 20px;
+    height: 100%;
     color: white;
 }
 
-.div-button:hover {
-    background-color: #5cc3bd;
-}
-
-a{
-    text-decoration: none;
+mat-drawer-content {
+    background-color: lightseagreen;
+    height: 100%;
 }

@@ -1,0 +1,39 @@
+<mat-tab-group>
+    <mat-tab label="创建CMPP账号">
+        <input type="text" class="input-box" placeholder="请输入 AcctId">
+        <div class="div-link no-select">创建</div>
+        <textarea matInput placeholder="输出结果" readonly></textarea>
+    </mat-tab>
+
+    <mat-tab label="修改模板为类型(合帧/多帧)">
+        <select class="select-box">
+            <option>转合帧</option>
+            <option>转多帧</option>
+        </select>
+        <input type="text" class="input-box" placeholder="请输入 TemplateId">
+        <div class="div-link no-select">修改</div>
+    </mat-tab>
+
+    <mat-tab label="推送回执">
+        <select class="select-box" (change)="receiver.changeReceiverType($event)" >
+            <option *ngFor="let receiverOption of receiver.receiverOptions" value="{{receiverOption.id}}">
+                {{receiverOption.name}}
+            </option>
+        </select>
+        <select class="select-box" [style.display]="receiver.operatorDisplay">
+            <option *ngFor="let operator of receiver.operatorOptions; let i = index" value="{{i}}">
+                {{operator}}
+            </option>
+        </select>
+        <select class="select-box" (change)="receiver.changeStatus($event)">
+            <option *ngFor="let stauts of receiver.receiverStatus; let i = index" value="{{i}}">
+                {{stauts}}
+            </option>
+        </select>
+        <input type="text" class="input-box" [placeholder]="receiver.receiverType" >
+        <input type="text" class="input-box" placeholder="请输入批次号对应手机号(单条)" [style.display]="receiver.phoneInputDisplay" >
+        <input type="text" class="input-box" placeholder="请输入失败原因" [style.display]="receiver.receiverMsgDisplay" >
+        <input type="text" class="input-box" [placeholder]='receiver.urlPlaceholder + ", 例如: http://47.93.1.140:18081/req"'>
+        <div class="div-link no-select">推送</div>
+    </mat-tab>
+</mat-tab-group>

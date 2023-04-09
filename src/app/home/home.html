@@ -1,14 +1,36 @@
-<mat-tab-group animationDuration="0">
-    <mat-tab label="{{list.tm.tag}}" *ngFor="let list of navList">
-        <mat-drawer-container>
-            <mat-drawer mode="side" opened>
-                <div class="div-button no-select" *ngFor="let side of list.sn">
-                    {{side.tag}}
-                </div>
-            </mat-drawer>
-            <mat-drawer-content>
-                this is {{list.tm.tag}}
-            </mat-drawer-content>
-        </mat-drawer-container>
-    </mat-tab>
-</mat-tab-group>
+<mat-drawer-container class="example-container">
+    <mat-drawer #drawer mode="over">
+        <div class="no-select" style="text-align: center">
+            <a href="{{officialWebsite}}">
+                <img src="assets/umcc.png" style="margin: 1em auto" width="110" height="27" alt="官网" title="官网" draggable="false">
+            </a>
+        </div>
+        <div *ngFor="let nav of navArray" class="div-button no-select"
+             routerLink="{{nav.link}}"
+             (click)='updateTitle(nav) ;drawer.toggle()'>
+            {{nav.nameCN}}
+        </div>
+    </mat-drawer>
+
+    <mat-drawer-content [style]="bodyContentStyle">
+        <mat-toolbar>
+            <button mat-icon-button (click)="drawer.toggle()">
+                <mat-icon>menu</mat-icon>
+            </button>
+            <span style="margin-left: 20px" class="no-select">{{nowNav.nameCN}}</span>
+            <span class="example-spacer"></span>
+            <mat-icon>pepole</mat-icon>
+            <span class="material-icons no-select" title="优秀的"> thumb_up_off_alt </span>
+            <span style="font-size: 16px" class="no-select">管理员</span>
+        </mat-toolbar>
+
+        <div id="body-component">
+            <div *ngIf="nowNav.nameEn != 'Home'">
+            <router-outlet></router-outlet>
+            </div>
+            <div *ngIf="nowNav.nameEn == 'Home'">
+                供运云平台成员使用的后台小工具
+            </div>
+        </div>
+    </mat-drawer-content>
+</mat-drawer-container>

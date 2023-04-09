@@ -1,1 +1,4 @@
-this is doc
+<div class="no-select div-link" *ngFor="let nav of navArray"
+     (click)="download.download(nav.link)" >
+        {{nav.nameCN}}
+</div>
